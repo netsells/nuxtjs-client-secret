@@ -1,0 +1,15 @@
+{
+  "name": "@netsells/nuxtjs-token-cookie",
+  "version": "1.0.0",
+  "description": "Middleware for getting an access token from your API for your frontend without exposing your client ID and secret",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam Boylett <sam.boylett@netsells.co.uk>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cookie": "^0.4.0"
+  }
+}
