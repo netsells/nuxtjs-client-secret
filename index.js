@@ -1,12 +1,24 @@
 import axios from 'axios';
 import cookie from 'cookie';
 
+/**
+ * Register the nuxt module
+ *
+ * @param {Object} options
+ */
 export default function({
     token_url,
     grant_type = 'client_credentials',
     client_id,
     client_secret,
 }) {
+    /**
+     * The middleware
+     *
+     * @param {Object} req
+     * @param {Object} res
+     * @param {Function} next
+     */
     const middleware = async function(req, res, next) {
         try {
             const credentials = await axios.post(token_url, {
