@@ -1,12 +1,12 @@
-import axios from 'axios';
-import cookie from 'cookie';
+const axios = require('axios');
+const cookie = require('cookie');
 
 /**
  * Register the nuxt module
  *
  * @param {Object} options
  */
-export default function({
+module.exports = function({
     token_url,
     grant_type = 'client_credentials',
     client_id,
@@ -36,4 +36,19 @@ export default function({
     };
 
     this.addServerMiddleware(middleware);
-}
+};
+
+/**
+ * Get the authorization headers
+ *
+ * @returns {Object}
+ */
+module.exports.getAuthHeaders = function() {
+    const { access_token } = cookie.parse(document.cookie);
+
+    return {
+        Authorization: access_token && `Bearer ${ access_token }`,
+    };
+};
+
+module.exports.meta = require('./package.json');
