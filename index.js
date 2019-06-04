@@ -44,7 +44,7 @@ module.exports = function({
  * @returns {Object}
  */
 module.exports.getAuthHeaders = function() {
-    if (process.server) {
+    if (typeof document === 'undefined') {
         return {};
     }
 
