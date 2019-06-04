@@ -1,6 +1,6 @@
 {
   "name": "@netsells/nuxtjs-client-secret",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Middleware for getting an access token from your API for your frontend without exposing your client ID and secret",
   "main": "index.js",
   "scripts": {

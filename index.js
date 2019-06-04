@@ -44,6 +44,10 @@ module.exports = function({
  * @returns {Object}
  */
 module.exports.getAuthHeaders = function() {
+    if (process.server) {
+        return {};
+    }
+
     const { access_token } = cookie.parse(document.cookie);
 
     return {
