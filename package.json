@@ -1,9 +1,10 @@
 {
   "name": "@netsells/nuxtjs-client-secret",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Middleware for getting an access token from your API for your frontend without exposing your client ID and secret",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "babel index.js -d dist",
     "lint": "eslint index.js"
   },
   "author": "Sam Boylett <sam.boylett@netsells.co.uk>",
@@ -13,6 +14,9 @@
     "cookie": "^0.4.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "@netsells/eslint-config": "^2.3.0",
     "eslint": "^4.10.0",
     "eslint-plugin-require-jsdoc-except": "^1.3.0",
