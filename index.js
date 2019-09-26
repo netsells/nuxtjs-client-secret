@@ -1,3 +1,5 @@
+require('@babel/polyfill');
+
 const axios = require('axios');
 const cookie = require('cookie');
 
